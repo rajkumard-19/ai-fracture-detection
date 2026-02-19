@@ -199,6 +199,12 @@ app.post('/api/analyze', upload.single('image'), async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`\n🏥 RayVive Server running at http://localhost:${port}\n`);
-});
+// Start server only when running locally (not on Vercel)
+if (process.env.VERCEL !== '1') {
+    app.listen(port, () => {
+        console.log(`\n🏥 RayVive Server running at http://localhost:${port}\n`);
+    });
+}
+
+// Export for Vercel serverless
+module.exports = app;
