@@ -1,14 +1,24 @@
 {
   "name": "ai-fracture-detection",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "version": "2.0.0",
+  "description": "RayVive - AI-Powered Bone Fracture Detection & Recovery Planning System",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "fracture",
+    "detection",
+    "ai",
+    "medical",
+    "xray"
+  ],
+  "author": "Raj Kumar",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
