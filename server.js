@@ -12,7 +12,7 @@ const upload = multer({
     limits: { fileSize: 15 * 1024 * 1024 } // 15MB
 });
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
