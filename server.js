@@ -24,7 +24,7 @@ app.use(express.json());
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 // ACCURACY-FIRST: Use Pro model first (best accuracy), then Flash as fallback
-const MODELS = ['gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash'];
+const MODELS = ['gemini-2.5-flash', 'gemini-2.5-pro', 'gemini-2.0-flash'];
 
 // Board-Certified Radiologist Clinical Report Prompt
 const PROMPT = `You are Dr. RayVive, a Board-Certified Radiologist and Orthopedic Trauma Specialist with 25 years of clinical experience at a Level 1 Trauma Center. You are analyzing an X-ray image processed through the RayVive AI pipeline, which utilizes advanced digital filtering (Gaussian denoising, contrast enhancement, Sobel edge detection) for noise reduction and contrast enhancement.
